@@ -10,7 +10,12 @@ import java.util.Optional;
 @Repository
 public interface ProductoRepositorio extends JpaRepository<EntidadProducto, Long> {
 
+    // 1. Búsqueda por serial (retorna Optional)
     Optional<EntidadProducto> findEntidadProductoBySerial(String serial);
 
+    // 2. Eliminación por serial
     void deleteEntidadProductoBySerial(String serial);
+
+    //  3. Verificación de existencia
+    boolean existsBySerial(String serial);
 }

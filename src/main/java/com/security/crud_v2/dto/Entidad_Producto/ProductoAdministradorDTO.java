@@ -7,9 +7,11 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
-public class ProductoAdminDTO {
+public class ProductoAdministradorDTO {
 
     @NotBlank(message = "El nombre no puede estar vacío")
     @Size(min = 4, message = "El nombre debe tener al menos 4 caracteres")
@@ -30,5 +32,7 @@ public class ProductoAdminDTO {
     @NotBlank(message = "El serial no puede estar vacío")
     @Size(min = 4, message = "El serial debe tener al menos 4 caracteres")
     private String serial;
+
+    private LocalDateTime fechaCreacion;
 
 }

@@ -2,24 +2,24 @@ package com.security.crud_v2.servicio.Producto;
 
 import com.security.crud_v2.dto.Entidad_Producto.ActualizarProductoDTO;
 import com.security.crud_v2.dto.Entidad_Producto.CrearProductoDTO;
-import com.security.crud_v2.dto.Entidad_Producto.ProductoAdminDTO;
-import com.security.crud_v2.dto.Entidad_Producto.ProductoUserDTO;
+import com.security.crud_v2.dto.Entidad_Producto.ProductoAdministradorDTO;
+import com.security.crud_v2.dto.Entidad_Producto.ProductoUsuarioDTO;
 
 import java.util.List;
 
 public interface IProducto {
 
-    public List<ProductoUserDTO> mostrarProductosUser();
+    public List<ProductoUsuarioDTO> mostrarProductosUsuario();
 
-    public List<ProductoAdminDTO> mostrarProductosAdmin();
+    public List<ProductoAdministradorDTO> mostrarProductosAdmin();
 
     public CrearProductoDTO crearProductoAdmin(CrearProductoDTO crearProductoDTO);
 
     public ActualizarProductoDTO actualizarProducto(String serial, ActualizarProductoDTO actualizarProductoDTO);
 
-    public ProductoAdminDTO buscarProductoPorSerialAdmin(String serial);
+    public ProductoAdministradorDTO buscarProductoPorSerialAdmin(String serial);
 
-    public ProductoUserDTO buscarProductoPorSerialUsuario(String serial);
+    public ProductoUsuarioDTO buscarProductoPorSerialUsuario(String serial);
 
     public void eliminarProducto(String serial);
 
